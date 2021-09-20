@@ -1,45 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><%= title %></title>
-    <!-- Bootstrap CSS -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Libs CSS -->
+
+    <link rel="stylesheet" href="../assets/libs/prismjs/themes/prism.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      href="../assets/libs/prismjs/plugins/line-numbers/prism-line-numbers.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/prismjs/plugins/toolbar/prism-toolbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../assets/libs/dropzone/dist/dropzone.css" />
+    <link
+      href="../assets/libs/@mdi/font/css/materialdesignicons.min.css"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css"
+    />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="../assets/css/theme.min.css" />
+    <title>Login - Game RPS</title>
   </head>
+
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="container d-flex flex-column">
+      <div class="row align-items-center justify-content-center g-0 min-vh-100">
+        <div class="py-8 col-12 col-md-8 col-lg-6 col-xxl-4 py-xl-0">
+          <!-- Card -->
+          <div class="card smooth-shadow-md">
+            <!-- Card body -->
+            <div class="p-6 card-body">
+              <div class="mb-4 text-center">
+                <a href="#" class="text-black text-decoration-none important"
+                  ><img
+                    src="../images/logo.png"
+                    class="mb-2"
+                    alt=""
+                    width="70px"
+                  />
+                  <span class="text-black fs-3 text-decoration-none"
+                    >GAME RPS</span
+                  ></a
+                >
+                <!-- <p class="mb-6">Please Login To C.</p> -->
+              </div>
+              <!-- Form -->
+              <form action="/login" method="POST">
+                <!-- Username -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    name="email"
+                    placeholder="Email address here"
+                    required=""
+                  />
+                </div>
+                <!-- Password -->
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    class="form-control"
+                    name="password"
+                    placeholder="**************"
+                    required=""
+                  />
+                </div>
+                <!-- Checkbox -->
+                <div
+                  class="mb-4  d-lg-flex justify-content-between align-items-center"
+                >
+                  <div class="form-check custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="rememberme"
+                    />
+                    <label class="form-check-label" for="rememberme"
+                      >Remember me</label
+                    >
+                  </div>
+                </div>
+                <div>
+                  <!-- Button -->
+                  <div class="d-grid">
+                    <input
+                      type="submit"
+                      class="btn btn-primary"
+                      value="Sign in"
+                    />
+                  </div>
 
-    <% for(let i = 0; i < getUserGame.length ; i++) { %>
-    <p><%= getUserGame[i].username %></p>
+                  <div class="mt-4 d-md-flex justify-content-between">
+                    <div class="mb-2 mb-md-0">
+                      <a href="#" class="fs-5">Create An Account </a>
+                    </div>
+                    <div>
+                      <a href="#" class="text-inherit fs-5"
+                        >Forgot your password?</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <% }%>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">id</th>
-          <th scope="col">username</th>
-          <th scope="col">email</th>
-          <th scope="col">gen_random</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% for(let i = 0; i < getUserGame.length ; i++) { %>
-        <tr>
-          <th scope="row"><%= getUserGame[i].id %></th>
-          <td><%= getUserGame[i].username %></td>
-          <td><%= getUserGame[i].email %></td>
-          <td>@<%= getUserGame[i].generate_random %></td>
-        </tr>
-        <% }%>
-      </tbody>
-    </table>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
+    <!-- Libs JS -->
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/libs/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="../assets/libs/feather-icons/dist/feather.min.js"></script>
+    <script src="../assets/libs/prismjs/components/prism-core.min.js"></script>
+    <script src="../assets/libs/prismjs/components/prism-markup.min.js"></script>
+    <script src="../assets/libs/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="../assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+
+    <!-- clipboard -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="../assets/js/theme.min.js"></script>
   </body>
 </html>

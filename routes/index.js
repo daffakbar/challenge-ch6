@@ -1,7 +1,8 @@
 var express = require("express");
 var router = express.Router();
 
-var jwt = require("jsonwebtoken");
-var secret = "this is secret";
-
+router.get("/", (req, res, next) => {
+  //   res.json({ test: "tess" });
+  res.render("index");
+});
 module.exports = router;

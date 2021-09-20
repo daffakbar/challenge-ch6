@@ -50,10 +50,11 @@ app.use(async (req, res, next) => {
     }
     return next();
   } else {
-    return res.status(403).send({
-      success: false,
-      msg: "token tidak tersedia",
-    });
+    // return res.status(403).send({
+    //   success: false,
+    //   msg: "token tidak tersedia",
+    // });
+    res.render("error-page");
   }
 });
 
