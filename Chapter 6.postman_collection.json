@@ -1,0 +1,391 @@
+{
+	"info": {
+		"_postman_id": "3abd0839-ef35-4f05-94f1-5a3268b07640",
+		"name": "Chapter 6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GAME",
+			"item": [
+				{
+					"name": "user_game GET ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEsInVzZXJuYW1lIjoiV2lsZGFuMTIzIiwicGFzc3dvcmQiOiIkMmIkMTAka0ZDdFQ3SUZZdnVuRDJpSHFseVhjdTNGRXNpbEVGZE5xS3RSbkV6dFROYkRqOHdVRzYuN3UiLCJlbWFpbCI6IndpbGRhbkBtYWlsLmNvbSIsImdlbmVyYXRlX3JhbmRvbSI6IldpbGRhbjEyMzIiLCJjcmVhdGVkQXQiOiIyMDIxLTA5LTIwVDAwOjMxOjM2LjgwNFoiLCJ1cGRhdGVkQXQiOiIyMDIxLTA5LTIwVDAwOjMxOjM2LjgwNFoiLCJpYXQiOjE2MzIxNDkyMzksImV4cCI6MTYzMjIzNTYzOX0.6DqAU4vZL0fAcXqVHvFM2DxnmlP4FNgpX2MclRrSvYQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "daffaoye",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "daffa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/users-game",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users-game"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_game POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "akbar51",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "akbar55@email.com",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "Surabaya city",
+									"type": "text"
+								},
+								{
+									"key": "notelp",
+									"value": "08123123",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "Daffa Akbar",
+									"type": "text"
+								},
+								{
+									"key": "tanggal_lahir",
+									"value": "2021-09-14",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/users-game",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users-game"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_game DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "daffaoye",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "daffa@email.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/users-game/delete/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users-game",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_game_history GET ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "daffaoye",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "daffa@email.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/users-history",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users-history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_game_history GET BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "daffaoye",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "daffa@email.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/users-history/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users-history",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_game_biodata GET ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "asdasd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "daffaoye",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "daffa@email.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/users-biodata",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users-biodata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_game_biodata GET BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEsInVzZXJuYW1lIjoiV2lsZGFuMTIzIiwicGFzc3dvcmQiOiIkMmIkMTAka0ZDdFQ3SUZZdnVuRDJpSHFseVhjdTNGRXNpbEVGZE5xS3RSbkV6dFROYkRqOHdVRzYuN3UiLCJlbWFpbCI6IndpbGRhbkBtYWlsLmNvbSIsImdlbmVyYXRlX3JhbmRvbSI6IldpbGRhbjEyMzIiLCJjcmVhdGVkQXQiOiIyMDIxLTA5LTIwVDAwOjMxOjM2LjgwNFoiLCJ1cGRhdGVkQXQiOiIyMDIxLTA5LTIwVDAwOjMxOjM2LjgwNFoiLCJpYXQiOjE2MzIxMTg3NTQsImV4cCI6MTYzMjIwNTE1NH0.zGmsxPU_U66whHkgbAWlHqVM5fdnsPr84yONq6htcCw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "daffaoye",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "daffa@email.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/users-biodata/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users-biodata",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN WITH JWT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "daffaoye",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "wildan@mail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

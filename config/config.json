@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "root",
+    "database": "game_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "secret": "this is secret"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "root",
+    "database": "game_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
